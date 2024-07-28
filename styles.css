@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./images/weather-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.d-flex.justify-content-center span {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    padding: 12px;
+    border: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.btn {
+    padding: 12px;
+    border: 0;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -4px;
+}
+
+.degree {
+    color: white;
+    font-size: 20px;
+}
+
+.humidity {
+    color: white;
+    font-size: 20px;
+    margin-top: 11px;
+}
+
+.wind-speed {
+    color: white;
+    font-size: 20px;
+    margin-top: 11px;
+}
+
+.forecast-container {
+    /* display: flex; */
+    margin-left: -57px;
+    overflow-y: auto;
+    max-height: 350px;
+    overflow-x: hidden;
+}
+
+.forecast {
+    margin-left: 50px;
+}
+
+.forecast {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.forecast h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.forecast img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.forecast p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.forecast-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.forecast-container::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.input-container {
+    position: relative;
+    bottom: 40%;
+    right: 59%;
+}
+
+.d-flex.justify-content-center {
+    margin-left: -78%;
+    margin-top: 146px;
+    width: 20%;
+}
+
+.forecast-empty-h2 {
+    margin-bottom: 17px;
+    margin-left: 12px;
+}
