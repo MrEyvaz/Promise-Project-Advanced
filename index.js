@@ -66,18 +66,18 @@ function displayHourlyForecastData(cityName, data) {
     const hourlyForecastContainer = document.querySelector('.hourly-forecast-container');
     const hourly_forecast = document.querySelector('.hourly-forecast');
 
-    hourlyForecastContainer.innerHTML = '';
-    data.forecast.forecastday[0].hour.forEach((forecast, index) => {
+    data.forecast.forecastday[0].hour.forEach((forecast) => {
+        console.log(forecast);
         const forecastDate = new Date(forecast.time);
-        const forecastDay = forecastDate.toLocaleDateString();
-        const forecastTime = forecastDate.toLocaleTimeString();
-        const iconUrl = forecast.condition.icon;
-        const temperature = forecast.temp_c;
-        const humidity = forecast.humidity;
-        const windSpeed = forecast.wind_kph;
-console.log(forecast.time);
+        const forecastDay = forecastDate.toLocaleDateString()
+        const forecastTime = forecastDate.toLocaleTimeString()
+        const iconUrl = forecast.condition.icon
+        const temperature = forecast.temp_c
+        const humidity = forecast.humidity
+        const windSpeed = forecast.wind_kph
+
         const forecastHTML = `
-                <div class="forecast">
+                <div class="forecast"  style="margin-top: 38px;">
                     <h2>${forecastDay} ${forecastTime}</h2>
                     <img src="${iconUrl}" alt="Weather icon for ${cityName}">
                     <p style="font-size: 20px;">Temperature: ${temperature}°C</p>
@@ -85,8 +85,8 @@ console.log(forecast.time);
                     <p style="font-size: 20px; margin-top: 10px;">Wind Speed: ${windSpeed} km/h</p>
                 </div>
             `;
-        hourly_forecast.insertAdjacentHTML('beforeend', forecastHTML);
-    });
+        hourly_forecast.insertAdjacentHTML('beforeend', forecastHTML)
+    })
     const hourly_forecast_text = document.querySelector('.hourly-forecast-text');
     hourly_forecast_text.textContent = `${cityName} in hourly forecast`;
 }

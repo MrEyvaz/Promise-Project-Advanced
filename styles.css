@@ -53,7 +53,7 @@ body {
     /* display: flex; */
     margin-left: -57px;
     overflow-y: auto;
-    max-height: 350px;
+    max-height: 346px;
     overflow-x: hidden;
 }
 
@@ -109,9 +109,38 @@ body {
     margin-left: -78%;
     margin-top: 146px;
     width: 20%;
+    height: 65%;
 }
 
 .forecast-empty-h2 {
     margin-bottom: 17px;
     margin-left: 12px;
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    max-width: 808px;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.hourly-forecast-container {
+    background-color: rgb(88, 130, 180);
+    width: 60%;
+    margin-right: -58%;
+    margin-top: 185px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+
+.hourly-forecast-text {
+    margin-top: -55px;
+    position: relative;
+    bottom: -11px;
+    left: 12px;
 }
